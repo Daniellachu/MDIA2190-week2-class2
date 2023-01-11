@@ -9,7 +9,7 @@
 }
 
 .main input {
-  background-color: antiquewhite;
+  border: solid 2px bisque;
 }
 
 .description {
