@@ -105,3 +105,21 @@ a {
     color-scheme: dark;
   }
 }
+
+.label{
+  font-size: 64px;
+}
+
+input{
+  padding: 25px;
+}
+
+.firstBox, .secondBox{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+button{
+  padding: 25px;
+}

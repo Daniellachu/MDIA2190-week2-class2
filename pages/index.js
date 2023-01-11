@@ -37,30 +37,33 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        
-        <label>First Name:</label>
-        <input
-          type="text"
-          id="first"
-          name="first"
-          pattern="[A-Z]{1}[a-z]{2,10}"
-          title='The first letter should be capitalized'
-          onChange={(e => setFormData({...formData, firstName: e.target.value }))} 
+        <div className='firstBox'>
+          <label className='label'>First Name:</label>
+          <input
+            type="text"
+            id="first"
+            name="first"
+            pattern="[A-Z]{1}[a-z]{2,10}"
+            title='The first letter should be capitalized'
+            onChange={(e => setFormData({...formData, firstName: e.target.value }))} 
+            value={formData.first}
+          />
+        </div>
+        <div className='secondBox'>
+          <label className='label'>Username:</label>
+          <input
+          type = "text"
+          id = "username"
+          name = "username"
+          required
+          title = "Type your Username"
+          minLength = "5"
+          maxLength= "10"
+          onChange={(e => setFormData({...formData, username: e.target.value }))} 
           value={formData.first}
-        />
-        <label>Username:</label>
-        <input
-        type = "text"
-        id = "username"
-        name = "username"
-        required
-        title = "Type your Username"
-        minLength = "5"
-        maxLength= "10"
-        onChange={(e => setFormData({...formData, username: e.target.value }))} 
-        value={formData.first}
-
-        />
+          />
+        </div>
+        
         <button type='submit' onClick={() => CheckLogin()}>Submit</button>
       </main>
     </>
